@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Short Blocker",
+    "version": "1.0",
+    "description": "Change the YouTube URL to play shorts in video mode.",
+    "permissions": [
+      "webNavigation",
+      "webRequest",
+      "webRequestBlocking",
+      "activeTab"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
